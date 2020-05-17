@@ -43,16 +43,16 @@ class Bot(BotHandler):
         hour = now.hour
 
         if 6 <= hour < 12:
-            greet_bot.send_message(last_chat_id, 'Good Morning, {}!'.format(last_chat_name))
+            self.send_message(last_chat_id, 'Good Morning, {}!'.format(last_chat_name))
 
         elif 12 <= hour < 17:
-            greet_bot.send_message(last_chat_id, 'Good Afternoon, {}!'.format(last_chat_name))
+            self.send_message(last_chat_id, 'Good Afternoon, {}!'.format(last_chat_name))
 
         elif 17 <= hour < 23:
-            greet_bot.send_message(last_chat_id, 'Good Evening, {}!'.format(last_chat_name))
+            self.send_message(last_chat_id, 'Good Evening, {}!'.format(last_chat_name))
 
         else:
-            greet_bot.send_message(last_chat_id, 'Good Night, {}!'.format(last_chat_name))
+            self.send_message(last_chat_id, 'Good Night, {}!'.format(last_chat_name))
 
 
 def read_token():
